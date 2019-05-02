@@ -1,0 +1,74 @@
+.hsh-container {
+    position: absolute;
+    top: 15%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+    width: 100%;
+}
+
+#remember {
+    width: 10%;
+}
+
+/*.pure-form input[type] {*/
+/*    width: auto;*/
+/*}*/
+
+.l-content {
+    margin: 0 auto;
+}
+
+.job-tables {
+    margin-bottom: 3.125em;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.job-table,
+.post-description {
+    border: 2px solid #6FBEF3;
+    border-radius: 5px;
+    margin: 0 0.5em 2em;
+    padding: 0 1em 1em;
+}
+
+.job-table-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.job-icon {
+    margin-right: 2%;
+}
+
+.subscribe-table {
+    border: 2px solid #6FBEF3;
+    border-radius: 5px;
+    margin: 0 0.5em 2em;
+    padding: 0 1em 1em;
+    background: #2d3e50;
+    color: white;
+}
+
+.content-subhead-subscribe {
+    color: white;
+}
+
+.post-avatar {
+    border-radius: 50px;
+    margin-left: 1em;
+    width:auto;
+    height:auto;
+    max-width:15%;
+}
+
+.avatar-content {
+    display: flex;
+}
+
+.avatar-info {
+    margin-left: 3%;
+    margin-top: 6%;
+}
