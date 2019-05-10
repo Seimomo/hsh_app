@@ -35,3 +35,16 @@ Route::get('/job/{id}', 'PageController@show');
 Route::resource('subscribes', 'SubscribeController')->only([
     'index', 'show', 'store'
 ]);
+
+Route::get('/portfolios', 'PortfolioController@index');
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/get_portfolio/{id}', 'PortfolioController@getUserPortfolio');
+    
+    Route::get('/get_portfolio', 'PortfolioController@getPortfolio');
+    
+    Route::get('/show_portfolio/{id}', 'PortfolioController@showPortfolio');
+    
+    Route::post('/update_portfolio', 'PortfolioController@updatePortfolio');
+    
+});

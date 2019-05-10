@@ -61,7 +61,8 @@
     margin-left: 1em;
     width:auto;
     height:auto;
-    max-width:15%;
+    max-width:25%;
+    max-height:25%;
 }
 
 .avatar-content {

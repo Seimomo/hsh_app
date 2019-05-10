@@ -23,6 +23,7 @@
             </div>
         {{ Form::close() }}
         <div class="l-content">
+            {{ Form::open(['url' => '/jobs', 'method' => 'post']) }}
             <h3 class="content-subhead">応募者一覧</h3>
             <div class="job-tables pure-g">
             
@@ -36,11 +37,15 @@
                                 
                             @if ($subscribe->user->avatar_path)
                                 <div class="avatar-content">
-                                    <img class="post-avatar" title="依頼者" src="{{ $subscribe->user->avatar_path }}"/>
-                                    <span class="avatar-info">{{ $subscribe->user->name }}</span>
+                                    <a href="/get_portfolio/{{ $subscribe->user->id }}">
+                                        <img class="post-avatar" title="応募者" src="{{ $subscribe->user->avatar_path }}"/>
+                                        <span class="avatar-info">{{ $subscribe->user->name }}</span>
+                                    </a>
                                 </div>
                             @else
-                                <i class="job-icon fa fa-user" title="応募者"></i><span>{{ $subscribe->user->name }}</span>
+                                <a href="/get_portfolio/{{ $subscribe->user->id }}"><i class="job-icon fa fa-user" title="応募者"></i>
+                                    <span>{{ $subscribe->user->name }}</span>
+                                </a>
                             @endif
                             </h3>
                         </div>
