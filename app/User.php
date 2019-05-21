@@ -48,4 +48,11 @@ class User extends Authenticatable
     public function subscribesToUser() {
       return $this->hasMany('App\Subscribe','user_id');
     }
+    
+    public function messagesToUser() {
+      return $this->hasMany('App\Message','to_user_id');
+    }
+    public function messagesFromUser() {
+      return $this->hasMany('App\Message','from_user_id');
+    }
 }

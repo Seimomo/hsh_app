@@ -19,7 +19,9 @@ class Job extends Migration
             $table->unsignedBigInteger('user_id'); 
             $table->string('title'); 
             $table->longText('content'); 
-            $table->date('wish_at'); 
+            $table->date('wish_at');
+            $table->integer('job_status');
+            $table->timestamp('job_done_at')->nullable();
             $table->timestamps(); 
 
             $table->index( 'user_id' );

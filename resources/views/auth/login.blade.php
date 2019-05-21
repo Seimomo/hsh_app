@@ -41,6 +41,10 @@
                     </a>
                 @endif
             </div>
+            <div class="pure-controls">
+                <a href="{{ route('register') }}" class="pure-button pure-button-primary">会員登録</a>
+                <a class="btn btn-link" href="{{ route('register') }}">{{ __('会員登録がまだの方はこちら') }}</a>
+            </div>
         </fieldset>
         </div>
         </div>

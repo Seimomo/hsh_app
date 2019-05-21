@@ -29,7 +29,10 @@
                                 <i class="job-icon fa fa-user" title="依頼者"></i><span>{{ $subscribe->user->name }}</span>
                             @endif
                             <li><i class="job-icon fa fa-calendar" title="希望納期"></i>{{ $subscribe->job->wish_at }}</li>
-                            <li><i class="job-icon fa fa-comment-o" title="ステータス"></i>{{ $subscribe->getStatusName($subscribe->status) }}</li>
+                            
+                            <li @if($subscribe->status > 1)style="color: pink;"@endif>
+                                <i class="job-icon fa fa-comment-o" title="ステータス"></i>
+                                {{ $subscribe->getStatusName($subscribe->status) }}</li>
                             <li>
                                 {{ Form::open(['url' => '/subscribes', 'method' => 'post']) }}                
                                     {{ Form::hidden('job_id',$subscribe->job->id) }}

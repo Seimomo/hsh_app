@@ -3,10 +3,9 @@
 @include('navbar')
 <div id="layout" class="hsh-container">
     <div class="content">
-        <div>
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
-                <h3 class="content-subhead">{{$job->title}}</h1>
+                <h3 class="content-subhead">{{$job->title}}</h3>
 
                 <!-- A single blog post -->
                 <section class="post">
@@ -33,7 +32,10 @@
                     </div>
                 </section>
             </div>
-        <a href="{{ url('/subscribes', $job->id) }}" class="button-secondary pure-button">応募</a>
+            <a href="{{ url('/message_form', $job->user->id) }}" class="button-secondary pure-button">メッセージを送る</a>
+            @if ($job->job_status == 1)
+                <a href="{{ url('/subscribes', $job->id) }}" class="button-secondary pure-button">応募</a>
+            @endif
     </div>
 </div>
 @endsection

@@ -31,7 +31,7 @@
                             @endif
                             
                         </li>
-                        <li><i class="job-icon fa fa-calendar" title="作成日"></i>{{ $portfolio->created_at }}</li>
+                        <li><i class="job-icon fa fa-calendar" title="作成日"></i>{{ $portfolio->created_at->format('Y-m-d') }}</li>
                     </ul>
                 </div>
                 </div>

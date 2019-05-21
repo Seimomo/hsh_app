@@ -12,10 +12,10 @@
             
                 @foreach($portfolios as $portfolio)
                 <div class="pure-u-1 pure-u-md-1-3">
-                    <div class="subscribe-table job-table-free">
+                    <div class="job-table job-table-free">
                     <div class="job-table-header">
-                        <h3 class="content-subhead-subscribe"><a href="/show_portfolio/{{ $portfolio->id }}">{{ $portfolio->title }}</a></h3>
-                        <h4 class="content-subhead-subscribe">{{ $portfolio->content }}</h4>
+                        <h3 class="content-subhead">{{ $portfolio->title }}</h3>
+                        <h4 class="content-subhead">{{ $portfolio->content }}</h4>
                     </div>
     
                     <ul class="job-table-list">
@@ -38,7 +38,7 @@
                 @endforeach
 
             </div> <!-- end job-tables -->
-        
+        <a href="{{ url('/message_form', $portfolio->user_id) }}" class="button-secondary pure-button">メッセージを送る</a>
         </div> <!-- end l-content -->
     </div>
     

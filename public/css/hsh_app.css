@@ -1,3 +1,63 @@
+/* nav */
+.pure-menu-link i {
+    margin-right: 3px;
+}
+
+.nav-link {
+    background: #2D3E50;
+    border-radius: 5px;
+}
+
+/* Important styles */
+#toggle {
+  display: block;
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#toggle span:after{
+  top: 9px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 5px;
+  background-color: #888;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* body */
 .hsh-container {
     position: absolute;
     top: 15%;
@@ -52,9 +112,16 @@
     color: white;
 }
 
-.content-subhead-subscribe {
+.content-subhead-subscribe{
     color: white;
 }
+
+
+.content-subhead-subscribe a{
+    color:#6FBEF3;
+}
+
+
 
 .post-avatar {
     border-radius: 50px;
@@ -73,3 +140,15 @@
     margin-left: 3%;
     margin-top: 6%;
 }
+
+.example_area {
+    border: solid 1px gray;
+    margin-top: 5px;
+    padding: 1em;
+}
+
+.job-table-header input[type=checkbox], input[type=radio] {
+    height: 1.2em;
+    width: 1.2em;
+}
+    

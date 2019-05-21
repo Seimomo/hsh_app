@@ -24,7 +24,7 @@ class EditController extends Controller
     public function postProfile(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'name'  => 'required|max:20',
+            'name'  => 'required|max:20|unique:users',
             'email' => 'required|email|max:255|unique:users,email,'.auth()->id()
         ]);
  

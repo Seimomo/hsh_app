@@ -25,6 +25,19 @@ class SubscribeController extends Controller
     //応募画面
     public function show($id)
     {
+        $example = "書き方の例）
+【自己紹介】
+氏名や職種、案件に興味をもった理由などを記載しましょう。
+クライアントからの信頼感につながります。
+
+【職務経験・実績・スキル】
+自身の職務経験やデザインスキル、応募する案件と似た過去実績を記載しましょう。
+内容を詳細に書くことで契約率が高まります。
+
+【案件に関する質問や対応期間】
+作業についての質問や自分のスケジュールなどを記載しましょう。
+その後のやりとりがスムーズになります。";
+
         $job = Job::find($id);
         $query = Subscribe::query();
         $query->where('user_id',auth()->id()); 
@@ -39,7 +52,7 @@ class SubscribeController extends Controller
         } else {
             $message = '';
         }
-        return view('subscribes.show',compact('job','message','job_id','user_id'));
+        return view('subscribes.show',compact('job','message','job_id','user_id','example'));
     }
     
     //応募・納品
@@ -73,10 +86,17 @@ class SubscribeController extends Controller
             $query->where('user_id',$user_id); 
             $query->where('status',2);
             $subscribes = $query->first();
+            
+            $query_job = Job::query();
+            $query_job->where('id',$job_id);
+            $jobs = $query_job->first();
             if (isset($subscribes)) {
                 //決定する人が特定できた時
                 $subscribes->status = 3;
                 $subscribes->save();
+                
+                $jobs->job_status = 3;
+                $jobs->save();
             }
             return $this->index();
         }

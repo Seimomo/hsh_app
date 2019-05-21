@@ -3,7 +3,7 @@
 @include('navbar')
 <div class="hsh-container">
     <div class="content">
-        <h3 class="content-subhead">仕事一覧</h3>
+        <h3 class="content-subhead">完了一覧</h3>
 
         <div class="l-content">
         
@@ -18,17 +18,8 @@
                     </div>
     
                     <ul class="job-table-list">
-                        <li>
-                            @if ($job->user->avatar_path)
-                            <div class="avatar-content">
-                                <img class="post-avatar" title="依頼者" src="{{ $job->user->avatar_path }}"/>
-                                <span class="avatar-info">{{ $job->user->name }}</span>
-                            </div>
-                            @else
-                                <i class="job-icon fa fa-user" title="依頼者"></i><span>{{ $job->user->name }}</span>
-                            @endif
-                            </li>
-                        <li><i class="job-icon fa fa-calendar" title="希望納期"></i>{{ $job->wish_at }}</li>
+                        
+                        <li><i class="job-icon fa fa-calendar" title="完了日"></i>{{ $job->job_done_at }}</li>
                     </ul>
                 </div>
                 </div>

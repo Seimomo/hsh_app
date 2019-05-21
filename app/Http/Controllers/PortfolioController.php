@@ -7,12 +7,22 @@ use App\Portfolio;
 
 class PortfolioController extends Controller
 {
-    // ログイン前の全員のポートフォリオ一覧
+    // ログイン前の全員の作成者一覧
     public function index()
     {
         $query = Portfolio::query();
-        $portfolios = $query->get();
+        $portfolios = $query->distinct()->select('user_id')->get();
+        
         return view('portfolios.index',compact('portfolios'));
+    }
+    
+    // ログイン前のポートフォリオ一覧（作成者一覧からのリンク）
+    public function getMessagePortfolio($id)
+    {
+        $query = Portfolio::query();
+        $query->where('user_id',$id);
+        $portfolios = $query->get();
+        return view('portfolios.messageportfolios',compact('portfolios'));
     }
     
     // ログイン後のポートフォリオ編集一覧（応募者一覧からのリンク）

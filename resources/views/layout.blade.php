@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-    <meta name="description" content="This site is matching user requesting homepage user to user creating homepage.">
+    <meta name="Keywords" content="ホームページ,無料 ,マッチング,ホームページ依頼,ポートフォリオ" />
+    <meta name="description" content="無料でホームページを作成したい人とホームページ作成スキルを向上させたい人のマッチングサイトです。">
     <title>Homepage Skill Helper</title>
     <link rel="shortcut icon" href="{{ secure_asset('/img/common/logo_man.png') }}" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
@@ -23,4 +24,7 @@
     <body>
         @yield('content')
     </body>
+    <footer class="footer l-box is-center">
+        Copyright © 2019 Homepage Skill Helper All Rights Reserved.
+    </footer>
 </html>
