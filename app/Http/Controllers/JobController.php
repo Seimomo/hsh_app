@@ -56,17 +56,21 @@ class JobController extends Controller
     
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'title'  => 'required',
-            'content' => 'required',
-            'wish_at'  => 'required|date_format:Y-m-d'
-        ]);
- 
-        //バリデート
-        if ($validator->fails())
-        {
-            return back()->withInput()->withErrors($validator);
-        }
+
+        if ($request->func == 1) {
+            $validator = Validator::make($request->all(), [
+                'title'  => 'required',
+                'content' => 'required',
+                'wish_at'  => 'required|date_format:Y-m-d'
+            ]);
+
+            //バリデート
+            if ($validator->fails())
+            {
+                return back()->withInput()->withErrors($validator);
+            }
+        } 
+        
         
         $data = Job::where('user_id', '=', auth()->id())->where('job_status','<>',4)->first();
         if (!isset($data)) {

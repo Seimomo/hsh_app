@@ -125,7 +125,7 @@
         
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <h2 class="content-head is-center">利用規約</h2>
+                <h2 class="content-head is-center">利用上の注意点</h2>
                 <div class="user_rule">
                 	<h4>重要な点を抜粋します。詳細は<a href="/rule">こちら</a>をご覧ください。</h4>
                     <ul>

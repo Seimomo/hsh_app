@@ -61,7 +61,8 @@ class PortfolioController extends Controller
     public function updatePortfolio(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title'  => 'required'
+            'title'  => 'required',
+            'content'  => 'required'
         ]);
  
         //バリデート
