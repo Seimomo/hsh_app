@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Portfolio;
+use Validator;
 
 class PortfolioController extends Controller
 {
@@ -59,6 +60,16 @@ class PortfolioController extends Controller
     // ログイン後のポートフォリオ編集詳細の登録
     public function updatePortfolio(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title'  => 'required'
+        ]);
+ 
+        //バリデート
+        if ($validator->fails())
+        {
+            return back()->withInput()->withErrors($validator);
+        }
+         
         $query = Portfolio::query();
         $query->where('id', $request->id);
         $data = $query->get()->first();

@@ -13,6 +13,7 @@
                 @endif
 
                 <p><a class="pure-button pure-button-primary" href="{{ url('/list') }}"><i class="fa fa-laptop"></i>仕事を探す</a></p>
+                <p><a class="pure-button pure-button-primary" href="{{ url('/jobs') }}">仕事を登録する</a></p>
                 <p><a class="pure-button pure-button-primary" href="{{ url('/portfolios') }}"><i class="fa fa-user"></i>作成者を探す</a></p>
             </div>
         </div>

@@ -37,9 +37,9 @@
                 <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                     <a href="#" id="creator_menuLink" class="pure-menu-link"><i class="fa fa-laptop"></i>作成する</a>
                     <ul class="pure-menu-children nav-link">
-                        <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/list') }}">仕事を探す</a></li>
-                        <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/subscribes') }}">応募から納品まで</a></li>
-                        <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/get_portfolio') }}">ポートフォリオ編集</a></li>
+                        <li class="pure-menu-item menu-right"><a class="pure-menu-link" href="{{ url('/list') }}">仕事を探す</a></li>
+                        <li class="pure-menu-item menu-right"><a class="pure-menu-link" href="{{ url('/subscribes') }}">応募から納品まで</a></li>
+                        <li class="pure-menu-item menu-right"><a class="pure-menu-link" href="{{ url('/get_portfolio') }}">ポートフォリオ編集</a></li>
                     </ul>
                 </li>
             @else

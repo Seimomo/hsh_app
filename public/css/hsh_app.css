@@ -8,6 +8,10 @@
     border-radius: 5px;
 }
 
+.pure-menu-item .menu-right {
+    padding-right: 1em;
+}
+
 /* Important styles */
 #toggle {
   display: block;

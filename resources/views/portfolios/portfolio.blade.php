@@ -8,6 +8,11 @@
             <div class="pure-control-group">
                 {{ Form::label('title', '案件名') }}
                 {{ Form::text('title',$title, ['class' => 'pure-input-1-2']) }}
+            @if ($errors->has('title'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('title') }}</strong>
+                </span>
+            @endif
             </div>
             <div class="pure-control-group">
                 {{ Form::label('content', '詳細') }}
