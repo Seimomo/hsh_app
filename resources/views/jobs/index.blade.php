@@ -4,7 +4,7 @@
 <div class="hsh-container">
     <div class="content">
         <h3 class="content-subhead">依頼内容</h3>
-        {{ Form::open(['url' => '/jobs', 'method' => 'post', 'class' => 'pure-form']) }}
+        {{ Form::open(['url' => '/jobs1', 'method' => 'post', 'class' => 'pure-form']) }}
             <div class="pure-control-group">
                 {{ Form::label('title', '案件名') }}
                 {{ Form::text('title',$title, ['class' => 'pure-input-1-2']) }}
@@ -50,7 +50,7 @@
             </div>
         {{ Form::close() }}
         <div class="l-content">
-            {{ Form::open(['url' => '/jobs', 'method' => 'post']) }}
+            {{ Form::open(['url' => '/jobs2', 'method' => 'post']) }}
             <h3 class="content-subhead">応募者一覧</h3>
             
             <div class="job-tables pure-g">

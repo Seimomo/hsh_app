@@ -46,6 +46,7 @@
                 <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/list') }}"><i class="fa fa-laptop"></i>仕事を探す</a></li>
                 <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/portfolios') }}"><i class="fa fa-user"></i>作成者を探す</a></li>
 
+                <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/contact') }}"><i class="fa fa-envelope-o"></i>問合せ</a></li>
                 <li class="pure-menu-item">
                     <a class="pure-menu-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                 </li>

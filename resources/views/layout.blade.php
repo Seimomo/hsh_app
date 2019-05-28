@@ -26,5 +26,7 @@
     </body>
     <footer class="footer l-box is-center">
         Copyright © 2019 Homepage Skill Helper All Rights Reserved.
+        
+        <a href="{{ url('/contact') }}"><i class="fa fa-envelope-o"></i>問合せ</a>
     </footer>
 </html>

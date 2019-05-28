@@ -35,8 +35,11 @@ Route::post('profile', 'Auth\EditController@postProfile');
 
 // 依頼内容登録
 Route::resource('jobs', 'JobController')->only([
-    'index', 'store'
+    'index'
 ]);
+
+Route::post('/jobs1', 'JobController@store');
+Route::post('/jobs2', 'JobController@store');
 
 // 完了した仕事一覧
 Route::get('/showdone', 'JobController@showdone');
@@ -83,3 +86,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/message_resform/{user_id}/{message_id}', 'MessageController@resform');
     
 });
+
+Route::get('contact', 'ContactsController@index');
+Route::post('contact/confirm', 'ContactsController@confirm');
+Route::post('contact/complete', 'ContactsController@complete');

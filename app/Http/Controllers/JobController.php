@@ -141,8 +141,8 @@ class JobController extends Controller
                 }
             }
         }
-        return $this->index();
-        //return view('home');
+        //return $this->index();
+        return view('home');
     }
     public function showdone()
     {

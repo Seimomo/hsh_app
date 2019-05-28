@@ -122,7 +122,8 @@ a.top-button {
     color: white;
 }
 
-.home-menu a {
+.home-menu a,
+.footer a {
     color: #6FBEF3;
 }
 .home-menu li a:hover,
