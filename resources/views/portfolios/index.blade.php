@@ -18,7 +18,7 @@
                             @if ($portfolio->user->avatar_path)
                             <div class="avatar-content">
                                 <img class="post-avatar" title="作成者" src="{{ $portfolio->user->avatar_path }}"/>
-                                <span class="avatar-info">{{ $portfolio->user->name }}</span>
+                                <a href="/get_userportfolio/{{ $portfolio->user->id }}"><span class="avatar-info">{{ $portfolio->user->name }}</span></a>
                             </div>
                             @else
                                 <a href="/get_userportfolio/{{ $portfolio->user->id }}"><i class="job-icon fa fa-user" title="作成者"></i><span>{{ $portfolio->user->name }}</span></a>
