@@ -50,11 +50,11 @@ class ContactsController extends Controller
         $request->session()->regenerateToken();
       
         // 送信メール
-        $from = env('mail_from_address','');
+        // $from = env('mail_from_address','');
         \Mail::send(new \App\Mail\Contact([
             'to' => $request->email,
             'to_name' => $request->name,
-            'from' => $from,
+            'from' => 'homepageskillhelper@gmail.com',
             'from_name' => 'Homepage Skill Helper',
             'subject' => 'お問い合わせありがとうございました。',
             'type' => $request->type,
@@ -63,7 +63,7 @@ class ContactsController extends Controller
      
         // 受信メール
         \Mail::send(new \App\Mail\Contact([
-            'to' => $from,
+            'to' => 'homepageskillhelper@gmail.com',
             'to_name' => 'Homepage Skill Helper',
             'from' => $request->email,
             'from_name' => $request->name,
