@@ -6,6 +6,8 @@
     <meta name="Keywords" content="ホームページ,無料 ,マッチング,ホームページ依頼,ポートフォリオ" />
     <meta name="description" content="無料でホームページを作成したい人とホームページ作成スキルを向上させたい人のマッチングサイトです。">
     <title>Homepage Skill Helper</title>
+
+
     <link rel="shortcut icon" href="{{ secure_asset('/img/common/logo_man.png') }}" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
 
@@ -20,6 +22,16 @@
     <!--app-->
     <link rel="stylesheet" href="{{ secure_asset('/css/hsh_top.css') }}">
     <link rel="stylesheet" href="{{ secure_asset('/css/hsh_app.css') }}">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141247234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-141247234-1');
+    </script>
 </head>
     <body>
         @yield('content')
